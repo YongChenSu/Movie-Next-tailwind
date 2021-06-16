@@ -5,36 +5,36 @@ import Results from '../components/Results';
 import requests from '../utils/requests';
 
 export default function Home({ results }) {
-    return (
-        <div>
-            <Head>
-                <title>Yong Movie</title>
-                <meta name='description' content='Yong Movie' />
-                <link rel='icon' href='/favicon.ico' />
-            </Head>
-            <Header />
+  return (
+    <div>
+      <Head>
+        <title>Yong Movie</title>
+        <meta name='description' content='Yong Movie' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+      <Header />
 
-            <Nav />
+      <Nav />
 
-            <Results results={results} />
-        </div>
-    );
+      <Results results={results} />
+    </div>
+  );
 }
 
 // this page SSR
 // context includes url
 export async function getServerSideProps(context) {
-    const genre = context.query.genre;
+  const genre = context.query.genre;
 
-    const request = await fetch(
-        `https://api.themoviedb.org/3${
-            requests[genre]?.url || requests.fetchTrending.url
-        }`
-    ).then((res) => res.json());
+  const request = await fetch(
+    `https://api.themoviedb.org/3${
+      requests[genre]?.url || requests.fetchTrending.url
+    }`
+  ).then((res) => res.json());
 
-    return {
-        props: {
-            results: request.results,
-        },
-    };
+  return {
+    props: {
+      results: request.results,
+    },
+  };
 }
