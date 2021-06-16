@@ -18,7 +18,7 @@ function Nav() {
         ))}
       </div>
       {/* to-white from-black means white to black. default: to-transparent */}
-      <div className='absolute top-0 right-0 bg-gradient-to-l from-[#001741] h-10 w-1/12' />
+      <div className='absolute top-0 right-0 bg-gradient-to-l from-[#0f4c82] h-10 w-1/12' />
     </nav>
   );
 }
