@@ -27,3 +27,11 @@
 - [TMDb](https://developers.themoviedb.org/3/getting-started/introduction)
 
 ## Website Demo
+
+#### Search by Categories
+
+![Search by Categories](https://raw.githubusercontent.com/YongChenSu/TMDb-NextJS-TailwindCSS/main/public/search_categories.gif)
+
+#### RWD
+
+![RWD](https://raw.githubusercontent.com/YongChenSu/TMDb-NextJS-TailwindCSS/main/public/rwd.gif)
